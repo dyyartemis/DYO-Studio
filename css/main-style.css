@@ -199,6 +199,7 @@ html::-webkit-scrollbar-thumb{
 
 .about{
   align-items: center;
+  min-height: 188vh;
 }
 
 .about .row{
@@ -206,7 +207,7 @@ html::-webkit-scrollbar-thumb{
   align-items: center;
   gap: 2.5rem;
   padding: 2.5rem;
-  min-height: 160vh;
+  min-height: 188vh;
   background-size: cover !important;
   background-position: center !important;
 }
