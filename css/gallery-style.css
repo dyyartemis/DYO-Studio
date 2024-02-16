@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/tt-commons');
+
+:root{
+    --first-color: #000;
+    --second-color: #fff;
+    --third-color: #f3e3c0;
+    --fourth-color: #444;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+*{
+    font-family: 'TT Commons', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+}
+  
+html::-webkit-scrollbar{
+    width: .6rem;
+}
+  
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+  
+html::-webkit-scrollbar-thumb{
+    background: #444;
+    border-radius: 5rem;
+}
+
+.heading{
+    text-align: center;
+    color: var(--first-color);
+    text-transform: uppercase;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+    font-size: 3.5rem;
+}
+
+.btn{
+    font-family: 'TT Commons', sans-serif;
+    margin: 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn a {
+    color: var(--second-color);
+    background: var(--first-color);
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    background: #fffaef;    
+}
+
+.btn a:hover{
+    background: #fe0;
+    color: var(--first-color);
+}
+
+/* HEADER */
+
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: var(--first-color);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    z-index: 999;
+}
+  
+.header .navbar a{
+    font-size: 1.5rem;
+    color: var(--second-color);
+    margin: 0 1.6rem;
+}
+  
+.header .navbar a:hover{
+    color: var(--third-color);
+    font-weight: bold;
+}
+  
+.header .icon div{
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    color: var(--second-color);
+    cursor: pointer;
+}
+  
+.header .icon div:hover{
+    color: var(--third-color);
+}
+  
+#menu-btn{
+    display: none;
+}
+  
+  /* HEADER END */
+
+/* GALLERY-CONTENT */
+
+.gallery-content{
+    align-items: center;
+    margin-top: 12%;
+}
+
+.gallery-content h3{
+    font-size: 2rem;
+    background: var(--fourth-color);
+    color: var(--second-color);
+    border-radius: 25px;
+    margin-bottom: 2rem;
+    padding: 1.4rem;
+}
+
+.gallery-content .gallery-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1, 1fr));
+    gap: 2rem;
+}
+  
+.gallery-content .gallery-container .box{
+    position: relative;
+    overflow: hidden;
+}
+  
+.gallery-content .gallery-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+  
+.gallery-content .gallery-container .box:hover img{
+    transform: scale(1.1);
+}
+
+.bottom-gallery {
+    display: flex;
+    min-height: 75vh;
+    width: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+/* FOOTER */
+.footer{
+    padding-top: 6rem;
+    font-size: 1rem;
+    color: var(--first-color);
+    font-style: italic;
+  }
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 991px){
+    html{
+      font-size: 55%;
+    }
+  
+    .header{
+      padding: 2rem;
+    }
+
+    section{
+      padding: 2rem;
+    }
+  
+}
+  
+@media (max-width: 768px){
+    
+    #menu-btn{
+        display: inline-block;
+    }
+    
+    .header .fa-times{
+        transform: rotate(180deg);
+    }
+    
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0; right: 0;
+        background: var(--fourth-color);
+        color: var(--second-color);
+        border-top: .1rem solid var(--first-color);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+    }
+
+    .bottom-gallery {
+        min-height: 50vh;
+        width: 100%;
+    }
+}
+  
+@media (max-width: 450px){
+    html{
+      font-size: 35%;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+    
+    section{
+        padding: 2rem;
+    }
+}
