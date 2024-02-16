@@ -46,7 +46,7 @@ html::-webkit-scrollbar-thumb{
   color: var(--first-color);
   margin-bottom: 3rem;
   padding: 1.2rem 0;
-  font-size: 3rem;
+  font-size: 3.4rem;
 }
 
 .main-btn{
@@ -202,7 +202,7 @@ html::-webkit-scrollbar-thumb{
   align-items: center;
   gap: 2.5rem;
   padding: 2.5rem;
-  min-height: 173vh;
+  min-height: 165vh;
   background-size: cover !important;
   background-position: center !important;
   text-align: left;
@@ -222,7 +222,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 .about .row .content p{
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #000;
   padding: 2rem 0;
   line-height: 2;
